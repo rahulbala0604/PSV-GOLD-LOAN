@@ -1,0 +1,119 @@
+@import '../../styles/variables.scss';
+@import '../../styles/responsive.scss';
+
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: rgba(255, 252, 247, 0.95);
+  backdrop-filter: blur(12px);
+  z-index: 1000;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border-bottom: 1px solid transparent;
+
+  &.scrolled {
+    box-shadow: var(--shadow-header);
+    border-bottom: 1px solid var(--border-light);
+    height: calc(var(--header-height) - 10px);
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: var(--header-height);
+    padding: 0.5rem 0;
+  }
+
+  .logo {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    
+    .logo-text {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary);
+      line-height: 1;
+      letter-spacing: -0.02em;
+    }
+    
+    .logo-sub {
+      font-size: 0.7rem;
+      font-weight: 600;
+      color: var(--secondary-dark);
+      letter-spacing: 0.15em;
+      margin-top: 2px;
+    }
+  }
+
+  .desktop-nav {
+    display: flex;
+    gap: 2rem;
+    
+    @include tablet {
+      display: none;
+    }
+    
+    .nav-link {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s;
+      position: relative;
+      padding: 0.5rem 0;
+      
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: var(--secondary);
+        transition: width 0.3s ease;
+      }
+      
+      &:hover, &.active {
+        color: var(--primary);
+        
+        &::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    
+    .header-contact {
+      @include mobile {
+        display: none !important;
+      }
+    }
+    
+    .btn-primary {
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+
+  .mobile-menu-btn {
+    display: none;
+    background: transparent;
+    border: none;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 0.5rem;
+    
+    @include tablet {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}

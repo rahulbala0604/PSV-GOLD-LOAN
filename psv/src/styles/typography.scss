@@ -1,0 +1,49 @@
+@import './variables.scss';
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 600; // Premium editorial feel
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  color: var(--primary);
+  letter-spacing: -0.015em;
+}
+
+.display {
+  font-family: 'Playfair Display', serif;
+  font-size: var(--fs-display);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  
+  @media (max-width: 1024px) {
+    font-size: var(--fs-4xl);
+  }
+  @media (max-width: 768px) {
+    font-size: var(--fs-3xl);
+  }
+}
+
+h1 { font-size: var(--fs-4xl); font-weight: 600; @media (max-width: 768px) { font-size: var(--fs-3xl); } }
+h2 { font-size: var(--fs-3xl); font-weight: 500; @media (max-width: 768px) { font-size: var(--fs-2xl); } }
+h3 { font-size: var(--fs-2xl); font-weight: 500; @media (max-width: 768px) { font-size: var(--fs-xl); } }
+h4 { font-size: var(--fs-xl);  font-weight: 500; @media (max-width: 768px) { font-size: var(--fs-lg); } }
+
+.body-text { font-size: var(--fs-base); }
+.small-text { font-size: var(--fs-sm); color: var(--text-muted); }
+.caption {
+  font-size: var(--fs-xs);
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}

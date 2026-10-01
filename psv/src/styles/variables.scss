@@ -1,0 +1,65 @@
+:root {
+  // Brand Colors - Premium Red & Gold Identity
+  --primary: #8B0000; // Deep Red
+  --primary-light: #A00000; // Luxury Red
+  --primary-accent: #C62828; // Bright Red Accent
+  --primary-dark: #4A0000;
+  
+  // Premium Metallic Gold
+  --secondary: #D4AF37; // Metallic Gold
+  --secondary-light: #F5E6A8; // Light Gold
+  --secondary-dark: #B8860B; // Luxury Gold
+  --secondary-gradient: linear-gradient(135deg, #F5E6A8 0%, #D4AF37 50%, #B8860B 100%);
+
+  // UI Colors
+  --background: #FFFCF7; // Warm White
+  --surface: #FFFFFF; // White
+  --surface-alt: #FFF9F0; // Cream
+  
+  // Text Colors
+  --text: #241414; // Dark Text
+  --text-muted: #6B5B5B;
+  --text-light: #FFFFFF;
+  
+  // State Colors
+  --success: #047857;
+  --warning: #B45309;
+  --danger: #BE123C;
+  --info: #0369A1;
+
+  // Borders & Dividers
+  --border: #E8D9D9;
+  --border-light: #F5EEEE;
+  --border-gold: rgba(212, 175, 55, 0.4);
+  --border-red: rgba(139, 0, 0, 0.2);
+  
+  // Border Radius - Editorial feel (sharp/subtle)
+  --radius-sm: 0px;
+  --radius-md: 2px;
+  --radius-lg: 4px;
+  --radius-xl: 8px;
+  --radius-full: 9999px;
+
+  // Premium Shadows - Elegant, deep, soft
+  --shadow-sm: 0 2px 4px rgba(139, 0, 0, 0.03);
+  --shadow-md: 0 8px 16px rgba(139, 0, 0, 0.05), 0 2px 6px rgba(139, 0, 0, 0.03);
+  --shadow-lg: 0 16px 32px rgba(139, 0, 0, 0.08), 0 4px 12px rgba(139, 0, 0, 0.04);
+  --shadow-gold: 0 8px 20px rgba(212, 175, 55, 0.3);
+  --shadow-header: 0 4px 24px rgba(139, 0, 0, 0.05);
+
+  // Layout
+  --container-width: 1200px;
+  --header-height: 80px;
+  --header-height-mobile: 64px;
+  
+  // Typography scale (Premium)
+  --fs-xs: 0.75rem;     // 12px
+  --fs-sm: 0.875rem;    // 14px
+  --fs-base: 1.0625rem; // 17px (Slightly larger body for readability)
+  --fs-lg: 1.25rem;     // 20px
+  --fs-xl: 1.5rem;      // 24px
+  --fs-2xl: 2rem;       // 32px
+  --fs-3xl: 2.5rem;     // 40px
+  --fs-4xl: 3.5rem;     // 56px
+  --fs-display: 4rem;   // 64px
+}
