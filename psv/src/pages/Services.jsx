@@ -15,8 +15,8 @@ const Services = () => {
       </section>
       
       <section style={{ background: 'var(--background)' }}>
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', minHeight: '500px' }}>
-          <div style={{ background: 'var(--surface-alt)', padding: '4rem 10%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div className="service-grid">
+          <div className="service-text">
             <span className="caption" style={{ color: 'var(--primary-accent)', marginBottom: '1rem', display: 'inline-block', letterSpacing: '2px' }}>PRIMARY SERVICE</span>
             <h2 style={{ fontSize: 'var(--fs-4xl)', color: 'var(--primary)', marginBottom: '1.5rem' }}>{PSV_GOLD_LOAN_CONFIG.services[0].title}</h2>
             <p style={{ color: 'var(--text-muted)', marginBottom: '2.5rem', fontSize: 'var(--fs-lg)', lineHeight: 1.8 }}>
@@ -27,7 +27,7 @@ const Services = () => {
             </Link>
           </div>
           
-          <div style={{ position: 'relative', minHeight: '400px' }}>
+          <div className="service-img" style={{ position: 'relative', minHeight: '400px' }}>
             <img src="/src/assets/images/gold_loan_services.png" alt="Secure Gold Handling" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', position: 'absolute', top: 0, left: 0 }} loading="lazy" />
           </div>
         </div>
@@ -42,10 +42,10 @@ const Services = () => {
           
           <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
             {PSV_GOLD_LOAN_CONFIG.faq.map((item, index) => (
-              <details key={index} style={{ borderBottom: '1px solid var(--border)', transition: 'all 0.3s' }}>
-                <summary style={{ padding: '1.5rem', cursor: 'pointer', background: 'var(--primary)', color: 'var(--surface)', fontWeight: '500', fontSize: 'var(--fs-lg)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
-                  {item.question}
-                  <span style={{ color: 'var(--secondary)' }}>+</span>
+              <details key={index} className="faq-details" style={{ borderBottom: '1px solid var(--border)', transition: 'all 0.3s' }}>
+                <summary style={{ padding: '1.5rem', minHeight: '52px', cursor: 'pointer', background: 'var(--primary)', color: 'var(--surface)', fontWeight: '500', fontSize: 'var(--fs-lg)', display: 'flex', justifyContent: 'space-between', alignItems: 'center', listStyle: 'none' }}>
+                  <span style={{ paddingRight: '1rem' }}>{item.question}</span>
+                  <span className="faq-icon" style={{ color: 'var(--secondary)', flexShrink: 0, fontSize: '1.5rem', lineHeight: 1 }}>+</span>
                 </summary>
                 <div style={{ padding: '2rem 1.5rem', background: 'var(--surface-alt)', color: 'var(--text)', lineHeight: '1.8' }}>
                   {item.answer}

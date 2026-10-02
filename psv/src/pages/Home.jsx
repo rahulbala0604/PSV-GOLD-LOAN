@@ -11,15 +11,15 @@ const Home = () => {
         Trusted Gold Loan Services Since {PSV_GOLD_LOAN_CONFIG.company.establishedYear}
       </div>
 
-      <section className="hero-section" style={{ background: 'var(--background)', padding: '4rem 0', position: 'relative', overflow: 'hidden' }}>
+      <section className="hero-section" style={{ background: 'var(--background)', position: 'relative', overflow: 'hidden' }}>
         <div style={{ position: 'absolute', top: 0, right: 0, bottom: 0, width: '50%', background: 'var(--primary-dark)', zIndex: 0, opacity: 0.03, clipPath: 'polygon(10% 0, 100% 0, 100% 100%, 0 100%)' }}></div>
         <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-          <div className="hero-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div className="hero-grid">
             <div className="hero-content">
               <span className="eyebrow" style={{ color: 'var(--primary-accent)', fontWeight: '700', letterSpacing: '2px', display: 'inline-block', marginBottom: '1.5rem', borderBottom: '1px solid var(--secondary)', paddingBottom: '0.5rem' }}>PSV GOLD LOAN • SINCE {PSV_GOLD_LOAN_CONFIG.company.establishedYear}</span>
               <h1 className="display" style={{ color: 'var(--primary)', marginBottom: '1.5rem' }}>Trusted Gold Loan Services for Your Financial Needs</h1>
               <p className="hero-subtitle" style={{ fontSize: 'var(--fs-lg)', color: 'var(--text-muted)', marginBottom: '2.5rem', lineHeight: '1.8' }}>We provide a premium gold loan experience prioritizing your convenience, clear financial terms, and the absolute safety of your assets.</p>
-              <div className="hero-actions" style={{ display: 'flex', gap: '1.5rem', alignItems: 'center' }}>
+              <div className="hero-actions">
                 <Link to="/contact" className="btn btn-primary" style={{ padding: '1rem 2.5rem', fontSize: 'var(--fs-md)', background: 'var(--primary)', color: 'var(--surface)', border: 'none' }}>Apply Now</Link>
                 <Link to="/calculator" className="btn btn-outline" style={{ padding: '1rem 2.5rem', fontSize: 'var(--fs-md)', borderColor: 'var(--primary)', color: 'var(--primary)' }}>Calculate Loan</Link>
               </div>
@@ -32,9 +32,9 @@ const Home = () => {
         </div>
       </section>
       
-      <section className="trust-strip" style={{ background: 'var(--primary-dark)', color: 'var(--surface)', padding: '4rem 0', borderTop: '4px solid var(--secondary)' }}>
+      <section className="trust-strip" style={{ background: 'var(--primary-dark)', color: 'var(--surface)', borderTop: '4px solid var(--secondary)' }}>
         <div className="container">
-          <div className="trust-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '2rem', textAlign: 'center' }}>
+          <div className="trust-grid">
             <div className="trust-item">
               <div className="trust-icon" style={{ color: 'var(--secondary)', marginBottom: '1rem', display: 'flex', justifyContent: 'center' }}><Building size={36} strokeWidth={1.5} /></div>
               <h3 style={{ fontSize: 'var(--fs-lg)', color: 'var(--surface)', marginBottom: '0.5rem', fontFamily: 'Inter, sans-serif', fontWeight: '500' }}>Since {PSV_GOLD_LOAN_CONFIG.company.establishedYear}</h3>
@@ -59,9 +59,9 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="page-section" style={{ background: 'var(--surface-alt)', padding: '6rem 0' }}>
+      <section className="page-section" style={{ background: 'var(--surface-alt)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div className="about-grid" style={{ alignItems: 'center' }}>
             <div>
               <img src="/src/assets/images/gold_assessment.png" alt="Gold Assessment" style={{ width: '100%', objectFit: 'cover', border: '1px solid var(--border-gold)', boxShadow: 'var(--shadow-md)' }} loading="lazy" />
             </div>
@@ -90,47 +90,47 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="page-section" style={{ background: 'var(--surface)', padding: '6rem 0' }}>
+      <section className="page-section" style={{ background: 'var(--surface)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <span className="caption" style={{ color: 'var(--primary-accent)', letterSpacing: '2px', display: 'block', marginBottom: '1rem' }}>HOW IT WORKS</span>
             <h2 style={{ color: 'var(--primary)', fontSize: 'var(--fs-3xl)' }}>A Transparent Process</h2>
           </div>
           
-          <div style={{ display: 'flex', justifyContent: 'space-between', position: 'relative', maxWidth: '1000px', margin: '0 auto', textAlign: 'center' }}>
-            <div style={{ position: 'absolute', top: '30px', left: '10%', right: '10%', height: '2px', background: 'var(--primary-accent)', zIndex: 1 }}></div>
+          <div className="process-timeline">
+            <div className="process-timeline-line"></div>
             
-            <div style={{ position: 'relative', zIndex: 2, background: 'var(--surface)', padding: '0 1rem', width: '20%' }}>
-              <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--primary)', color: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'var(--fs-xl)', fontWeight: '600', margin: '0 auto 1.5rem', border: '3px solid var(--surface)' }}>01</div>
+            <div className="process-item">
+              <div className="process-icon">01</div>
               <h3 style={{ fontSize: 'var(--fs-md)', color: 'var(--primary)', fontFamily: 'Inter, sans-serif' }}>Bring Your Gold</h3>
             </div>
             
-            <div style={{ position: 'relative', zIndex: 2, background: 'var(--surface)', padding: '0 1rem', width: '20%' }}>
-              <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--primary)', color: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'var(--fs-xl)', fontWeight: '600', margin: '0 auto 1.5rem', border: '3px solid var(--surface)' }}>02</div>
+            <div className="process-item">
+              <div className="process-icon">02</div>
               <h3 style={{ fontSize: 'var(--fs-md)', color: 'var(--primary)', fontFamily: 'Inter, sans-serif' }}>Purity Assessment</h3>
             </div>
             
-            <div style={{ position: 'relative', zIndex: 2, background: 'var(--surface)', padding: '0 1rem', width: '20%' }}>
-              <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--primary)', color: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'var(--fs-xl)', fontWeight: '600', margin: '0 auto 1.5rem', border: '3px solid var(--surface)' }}>03</div>
+            <div className="process-item">
+              <div className="process-icon">03</div>
               <h3 style={{ fontSize: 'var(--fs-md)', color: 'var(--primary)', fontFamily: 'Inter, sans-serif' }}>Eligibility Assessment</h3>
             </div>
             
-            <div style={{ position: 'relative', zIndex: 2, background: 'var(--surface)', padding: '0 1rem', width: '20%' }}>
-              <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--primary)', color: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'var(--fs-xl)', fontWeight: '600', margin: '0 auto 1.5rem', border: '3px solid var(--surface)' }}>04</div>
+            <div className="process-item">
+              <div className="process-icon">04</div>
               <h3 style={{ fontSize: 'var(--fs-md)', color: 'var(--primary)', fontFamily: 'Inter, sans-serif' }}>Loan Processing</h3>
             </div>
             
-            <div style={{ position: 'relative', zIndex: 2, background: 'var(--surface)', padding: '0 1rem', width: '20%' }}>
-              <div style={{ width: '60px', height: '60px', borderRadius: '50%', background: 'var(--primary)', color: 'var(--secondary)', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: 'var(--fs-xl)', fontWeight: '600', margin: '0 auto 1.5rem', border: '3px solid var(--surface)' }}>05</div>
+            <div className="process-item">
+              <div className="process-icon">05</div>
               <h3 style={{ fontSize: 'var(--fs-md)', color: 'var(--primary)', fontFamily: 'Inter, sans-serif' }}>Repayment & Closure</h3>
             </div>
           </div>
         </div>
       </section>
 
-      <section style={{ background: 'var(--primary)', padding: '6rem 0', color: 'var(--surface)' }}>
+      <section className="page-section" style={{ background: 'var(--primary)', color: 'var(--surface)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div className="about-grid" style={{ alignItems: 'center' }}>
             <div>
               <h2 style={{ fontSize: 'var(--fs-4xl)', color: 'var(--surface)', marginBottom: '1.5rem' }}>Know Your Estimated Loan Value</h2>
               <p style={{ fontSize: 'var(--fs-lg)', color: 'rgba(255,255,255,0.8)', marginBottom: '2.5rem' }}>
@@ -157,7 +157,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="page-section" style={{ background: 'var(--background)', padding: '6rem 0' }}>
+      <section className="page-section" style={{ background: 'var(--background)' }}>
         <div className="container">
           <div style={{ textAlign: 'center', marginBottom: '4rem' }}>
             <span className="caption" style={{ color: 'var(--primary-accent)', letterSpacing: '2px', display: 'block', marginBottom: '1rem' }}>REQUIREMENTS</span>
@@ -176,7 +176,7 @@ const Home = () => {
         </div>
       </section>
 
-      <section style={{ background: 'var(--surface-alt)', padding: '6rem 0', borderTop: '1px solid var(--border)' }}>
+      <section className="page-section" style={{ background: 'var(--surface-alt)', borderTop: '1px solid var(--border)' }}>
         <div className="container" style={{ textAlign: 'center' }}>
           <h2 style={{ color: 'var(--primary)', fontSize: 'var(--fs-4xl)', marginBottom: '1.5rem' }}>Visit PSV Gold Loan</h2>
           <p style={{ fontSize: 'var(--fs-lg)', color: 'var(--text-muted)', marginBottom: '3rem' }}>

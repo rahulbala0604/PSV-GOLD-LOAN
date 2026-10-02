@@ -10,8 +10,13 @@ const Footer = () => {
       <div className="container">
         <div className="footer-grid">
           <div className="footer-brand">
-            <h3 style={{ fontFamily: "'Playfair Display', serif", fontSize: '2rem', letterSpacing: '1px' }}>{PSV_GOLD_LOAN_CONFIG.company.shortName}</h3>
-            <p className="tagline" style={{ color: 'var(--secondary)' }}>GOLD LOAN</p>
+            <Link to="/" className="logo" style={{ display: 'flex', alignItems: 'center', textDecoration: 'none', marginBottom: '1rem' }}>
+              <img src="/src/assets/images/logo.png" alt="PSV Gold Loan Logo" className="logo-img" style={{ marginBottom: 0 }} />
+              <div className="logo-text-container" style={{ display: 'flex', flexDirection: 'column', marginLeft: '1rem' }}>
+                <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.75rem', fontWeight: '700', color: 'var(--surface)', lineHeight: 1 }}>{PSV_GOLD_LOAN_CONFIG.company.shortName}</span>
+                <span style={{ fontSize: '0.75rem', fontWeight: '600', letterSpacing: '2px', color: 'var(--secondary)', marginTop: '4px' }}>GOLD LOAN</span>
+              </div>
+            </Link>
             <p className="established" style={{ marginTop: '1rem', color: 'var(--secondary)' }}>
               Serving customers since {PSV_GOLD_LOAN_CONFIG.company.establishedYear}.
             </p>

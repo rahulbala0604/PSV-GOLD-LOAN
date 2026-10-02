@@ -26,7 +26,7 @@ const GoldLoan = () => {
       
       <section style={{ background: 'var(--primary-dark)', padding: '2rem 0', borderTop: '1px solid rgba(255,255,255,0.1)', borderBottom: '4px solid var(--secondary)' }}>
         <div className="container">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '2rem', textAlign: 'center', color: 'var(--surface)' }}>
+          <div className="stats-grid" style={{ color: 'var(--surface)', textAlign: 'center' }}>
             <div>
               <span style={{ display: 'block', fontSize: 'var(--fs-xl)', fontWeight: '600', color: 'var(--secondary)', marginBottom: '0.25rem' }}>2.0%</span>
               <span style={{ fontSize: 'var(--fs-sm)', textTransform: 'uppercase', letterSpacing: '1px', opacity: 0.8 }}>Monthly Interest</span>
@@ -82,9 +82,9 @@ const GoldLoan = () => {
         </div>
       </section>
       
-      <section style={{ padding: '6rem 0', background: 'var(--surface)' }}>
+      <section style={{ padding: '6rem 0', background: 'var(--surface)' }} className="page-section">
         <div className="container" style={{ maxWidth: '900px' }}>
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem' }}>
+          <div className="loan-grid">
             <div>
               <h2 style={{ fontSize: 'var(--fs-3xl)', color: 'var(--primary)', marginBottom: '2rem' }}>Eligibility</h2>
               <div style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>

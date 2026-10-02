@@ -33,28 +33,49 @@ const Header = () => {
     document.body.style.overflow = 'unset';
   };
 
+  const renderTickerGroup = () => (
+    <>
+      <span className="ticker-item">
+        <Phone size={14} /> +91 {PSV_GOLD_LOAN_CONFIG.contact.phone}
+      </span>
+      <span className="ticker-separator">•</span>
+      <span className="ticker-item">
+        Open: {PSV_GOLD_LOAN_CONFIG.contact.workingHours}
+      </span>
+      <span className="ticker-separator">•</span>
+      <span className="ticker-item">
+        Puthiamputhur - Premium Gold Loan Service
+      </span>
+      <span className="ticker-separator">•</span>
+    </>
+  );
+
   return (
     <>
-      <div style={{ background: 'var(--primary-dark)', padding: '0.5rem 0', color: 'var(--secondary)' }}>
-        <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', fontSize: 'var(--fs-sm)', fontWeight: '500' }}>
-          <div style={{ display: 'flex', gap: '1.5rem' }}>
-            <span style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              <Phone size={14} /> +91 {PSV_GOLD_LOAN_CONFIG.contact.phone}
-            </span>
-            <span className="hide-mobile" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-              Open: {PSV_GOLD_LOAN_CONFIG.contact.workingHours}
-            </span>
+      <div className="topbar-ticker">
+        <div className="ticker-wrapper">
+          <div className="ticker-content">
+            {renderTickerGroup()}
+            {renderTickerGroup()}
+            {renderTickerGroup()}
+            {renderTickerGroup()}
           </div>
-          <div className="hide-mobile">
-            Puthiamputhur - Premium Gold Loan Service
+          <div className="ticker-content" aria-hidden="true">
+            {renderTickerGroup()}
+            {renderTickerGroup()}
+            {renderTickerGroup()}
+            {renderTickerGroup()}
           </div>
         </div>
       </div>
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container header-container">
-          <Link to="/" className="logo" style={{ display: 'flex', flexDirection: 'column', textDecoration: 'none' }}>
-            <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.75rem', fontWeight: '700', color: 'var(--primary)', lineHeight: 1 }}>{PSV_GOLD_LOAN_CONFIG.company.shortName}</span>
-            <span style={{ fontSize: '0.65rem', fontWeight: '600', letterSpacing: '2px', color: 'var(--secondary-dark)' }}>GOLD LOAN</span>
+          <Link to="/" className="logo">
+            <img src="/src/assets/images/logo.png" alt="PSV Gold Loan Logo" className="logo-img" />
+            <div className="logo-text-container">
+              <span className="logo-text-primary">{PSV_GOLD_LOAN_CONFIG.company.shortName}</span>
+              <span className="logo-text-secondary">GOLD LOAN</span>
+            </div>
           </Link>
 
           <nav className="desktop-nav">

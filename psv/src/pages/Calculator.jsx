@@ -43,7 +43,7 @@ const Calculator = () => {
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', minHeight: '600px' }}>
           
           {/* Input Area */}
-          <div style={{ background: 'var(--surface-alt)', padding: '4rem 10%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="calc-panel input-panel" style={{ background: 'var(--surface-alt)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', marginBottom: '2rem' }}>
               <div className="btn-icon" style={{ background: 'var(--background)', color: 'var(--primary)' }}>
                 <CalcIcon size={24} />
@@ -123,7 +123,7 @@ const Calculator = () => {
           </div>
 
           {/* Result Area */}
-          <div style={{ background: 'var(--primary-dark)', padding: '4rem 10%', color: 'var(--surface)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+          <div className="calc-panel result-panel" style={{ background: 'var(--primary-dark)', color: 'var(--surface)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
             <h2 style={{ fontSize: 'var(--fs-xl)', marginBottom: '2rem', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '1rem', color: 'var(--secondary)' }}>
               Estimated Results
             </h2>

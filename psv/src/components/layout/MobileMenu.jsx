@@ -31,9 +31,12 @@ const MobileMenu = ({ isOpen, closeMenu }) => {
       <div className={`mobile-menu-overlay ${isOpen ? 'open' : ''}`} onClick={closeMenu}></div>
       <div className={`mobile-menu ${isOpen ? 'open' : ''}`}>
         <div className="mobile-menu-header">
-          <Link to="/" className="logo" onClick={closeMenu} style={{ textDecoration: 'none', display: 'flex', flexDirection: 'column' }}>
-            <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.75rem', fontWeight: '700', color: 'var(--secondary)', lineHeight: 1 }}>{PSV_GOLD_LOAN_CONFIG.company.shortName}</span>
-            <span style={{ fontSize: '0.65rem', fontWeight: '600', letterSpacing: '2px', color: 'rgba(255, 255, 255, 0.7)' }}>GOLD LOAN</span>
+          <Link to="/" className="logo" onClick={closeMenu} style={{ display: 'flex', alignItems: 'center', textDecoration: 'none' }}>
+            <img src="/src/assets/images/logo.png" alt="PSV Gold Loan Logo" className="logo-img" />
+            <div className="logo-text-container" style={{ display: 'flex', flexDirection: 'column', marginLeft: '0.75rem' }}>
+              <span style={{ fontFamily: "'Playfair Display', serif", fontSize: '1.25rem', fontWeight: '700', color: 'var(--secondary)', lineHeight: 1 }}>{PSV_GOLD_LOAN_CONFIG.company.shortName}</span>
+              <span style={{ fontSize: '0.6rem', fontWeight: '600', letterSpacing: '2px', color: 'rgba(255, 255, 255, 0.7)', marginTop: '2px' }}>GOLD LOAN</span>
+            </div>
           </Link>
           <button className="close-btn" onClick={closeMenu} aria-label="Close menu">
             <X size={28} />

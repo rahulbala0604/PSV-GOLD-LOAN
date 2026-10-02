@@ -11,11 +11,23 @@
   flex: 1;
   
   @include mobile {
-    padding-bottom: 70px; // Space for bottom nav
+    padding-bottom: calc(70px + env(safe-area-inset-bottom));
   }
 }
 
 // Floating WhatsApp Button
+@keyframes pulse-whatsapp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
 .floating-whatsapp {
   position: fixed;
   bottom: 24px;
@@ -31,6 +43,7 @@
   box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
   z-index: 90;
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: pulse-whatsapp 2s infinite;
   
   &:hover {
     transform: scale(1.1) translateY(-4px);
@@ -39,14 +52,14 @@
   }
   
   @include mobile {
-    bottom: 90px; // Above bottom nav
+    bottom: calc(84px + env(safe-area-inset-bottom));
     right: 16px;
     width: 52px;
     height: 52px;
     
     svg {
-      width: 24px;
-      height: 24px;
+      width: 26px;
+      height: 26px;
     }
   }
 }
@@ -61,14 +74,16 @@
     bottom: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 -2px 10px rgba(4, 30, 66, 0.05);
+    background-color: rgba(74, 0, 0, 0.9); // Deep red with transparency
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 -4px 24px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    height: 70px;
+    height: calc(72px + env(safe-area-inset-bottom));
+    padding-bottom: env(safe-area-inset-bottom);
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid var(--border-light);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
   }
   
   .bottom-nav-item {
@@ -77,22 +92,55 @@
     align-items: center;
     justify-content: center;
     gap: 4px;
-    color: var(--text-muted);
+    color: rgba(255, 255, 255, 0.5);
     text-decoration: none;
     flex: 1;
     height: 100%;
-    transition: all 0.2s;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    
+    svg {
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
     
     span {
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 32px;
+      height: 3px;
+      background: var(--secondary-gradient);
+      border-radius: 0 0 4px 4px;
+      transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
     }
     
     &.active {
-      color: var(--primary);
+      color: var(--secondary-light);
+      
+      svg {
+        transform: translateY(-2px);
+        color: var(--secondary);
+        filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+      }
       
       span {
-        font-weight: 600;
+        font-weight: 700;
+        transform: translateY(-1px);
+        color: var(--secondary);
+      }
+      
+      &::before {
+        transform: translateX(-50%) scaleX(1);
+        opacity: 1;
       }
     }
   }

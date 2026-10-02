@@ -12,12 +12,14 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   background-color: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 a {
@@ -53,7 +55,13 @@ img {
   a, 
   input, 
   select {
-    min-height: 44px;
+    min-height: 48px;
+  }
+}
+
+.hide-mobile {
+  @include mobile {
+    display: none !important;
   }
 }
 

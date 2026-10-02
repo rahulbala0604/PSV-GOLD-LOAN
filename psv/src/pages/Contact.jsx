@@ -78,10 +78,10 @@ Please contact the customer for further verification.`;
 
   return (
     <div className="page contact-page">
-      <div style={{ display: 'flex', minHeight: '100vh', flexWrap: 'wrap' }}>
+      <div className="contact-container" style={{ display: 'flex', minHeight: '100vh', flexWrap: 'wrap' }}>
         
         {/* Left Side: Contact Information (Red Panel) */}
-        <div style={{ flex: '1 1 400px', background: 'var(--primary)', color: 'var(--surface)', padding: '6rem 10%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div className="contact-panel contact-left" style={{ flex: '1 1 400px', background: 'var(--primary)', color: 'var(--surface)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <span className="caption" style={{ color: 'var(--secondary)', letterSpacing: '2px', display: 'block', marginBottom: '1rem' }}>CONTACT US</span>
           <h1 className="display" style={{ color: 'var(--surface)', marginBottom: '3rem' }}>Get in Touch</h1>
           
@@ -122,10 +122,10 @@ Please contact the customer for further verification.`;
           </div>
 
         {/* Right Side: Application Form (Cream Panel) */}
-        <div style={{ flex: '1 1 600px', background: 'var(--surface-alt)', padding: '6rem 10%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+        <div className="contact-panel contact-right" style={{ flex: '1 1 600px', background: 'var(--surface-alt)', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
           <h2 style={{ fontSize: 'var(--fs-3xl)', color: 'var(--primary)', marginBottom: '2rem' }}>Send an Inquiry</h2>
-          <form onSubmit={handleSubmit} noValidate style={{ maxWidth: '600px' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1.5rem', marginBottom: '1.5rem' }}>
+          <form onSubmit={handleSubmit} noValidate style={{ maxWidth: '600px', width: '100%' }}>
+            <div className="contact-form-grid" style={{ marginBottom: '1.5rem' }}>
                 <div>
                   <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '500', fontSize: 'var(--fs-sm)' }}>
                     Full Name <span style={{ color: 'var(--danger)' }}>*</span>

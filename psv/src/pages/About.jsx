@@ -18,7 +18,7 @@ const About = () => {
       
       <section style={{ padding: '6rem 0', background: 'var(--background)' }}>
         <div className="container">
-          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
+          <div className="about-grid" style={{ alignItems: 'center' }}>
             <div style={{ position: 'relative' }}>
               <div style={{ position: 'absolute', top: '20px', left: '-20px', bottom: '-20px', right: '20px', border: '1px solid var(--secondary)', zIndex: 0 }}></div>
               <img src="/src/assets/images/gold_assessment.png" alt="Professional Consultation" style={{ width: '100%', objectFit: 'cover', display: 'block', position: 'relative', zIndex: 1, boxShadow: 'var(--shadow-lg)' }} loading="lazy" />
