@@ -71,7 +71,7 @@ const Header = () => {
       <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
         <div className="container header-container">
           <Link to="/" className="logo">
-            <img src="/src/assets/images/logo.png" alt="PSV Gold Loan Logo" className="logo-img" />
+            <img src="/images/logo.png" alt="PSV Gold Loan Logo" className="logo-img" />
             <div className="logo-text-container">
               <span className="logo-text-primary">{PSV_GOLD_LOAN_CONFIG.company.shortName}</span>
               <span className="logo-text-secondary">GOLD LOAN</span>

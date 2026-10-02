@@ -28,7 +28,7 @@ const Services = () => {
           </div>
           
           <div className="service-img" style={{ position: 'relative', minHeight: '400px' }}>
-            <img src="/src/assets/images/gold_loan_services.png" alt="Secure Gold Handling" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', position: 'absolute', top: 0, left: 0 }} loading="lazy" />
+            <img src="/images/gold_loan_services.png" alt="Secure Gold Handling" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', position: 'absolute', top: 0, left: 0 }} loading="lazy" />
           </div>
         </div>
       </section>

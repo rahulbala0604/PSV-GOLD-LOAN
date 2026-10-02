@@ -26,7 +26,7 @@ const Home = () => {
             </div>
             <div className="hero-visual" style={{ position: 'relative' }}>
               <div style={{ position: 'absolute', top: '-10px', right: '-10px', bottom: '-10px', left: '-10px', border: '1px solid var(--secondary)', opacity: 0.5 }}></div>
-              <img src="/src/assets/images/hero_gold.png" alt="Premium Gold Jewellery" style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block', position: 'relative', zIndex: 2, boxShadow: 'var(--shadow-lg)' }} loading="eager" />
+              <img src="/images/hero_gold.png" alt="Premium Gold Jewellery" style={{ width: '100%', height: 'auto', objectFit: 'cover', display: 'block', position: 'relative', zIndex: 2, boxShadow: 'var(--shadow-lg)' }} loading="eager" />
             </div>
           </div>
         </div>
@@ -63,7 +63,7 @@ const Home = () => {
         <div className="container">
           <div className="about-grid" style={{ alignItems: 'center' }}>
             <div>
-              <img src="/src/assets/images/gold_assessment.png" alt="Gold Assessment" style={{ width: '100%', objectFit: 'cover', border: '1px solid var(--border-gold)', boxShadow: 'var(--shadow-md)' }} loading="lazy" />
+              <img src="/images/gold_assessment.png" alt="Gold Assessment" style={{ width: '100%', objectFit: 'cover', border: '1px solid var(--border-gold)', boxShadow: 'var(--shadow-md)' }} loading="lazy" />
             </div>
             <div>
               <span className="caption" style={{ color: 'var(--primary-accent)', letterSpacing: '2px', display: 'block', marginBottom: '1rem' }}>SUPER LOAN</span>
